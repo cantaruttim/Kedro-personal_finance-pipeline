@@ -1,0 +1,12 @@
+
+expenses_pivot:
+  type: pandas.ExcelDataset
+  filepath: /Users/cantaruttim/Library/CloudStorage/OneDrive-Personal/Documents/Pessoal/Documentos/Documentos - DAS e Financeiros/Finanças/finance_report.xlsx
+  load_args:
+    engine: openpyxl
+    sheet_name: GASTOS_MENSAIS
+    header: null
+
+expenses_unpivot:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/expenses_unpivot.csv
