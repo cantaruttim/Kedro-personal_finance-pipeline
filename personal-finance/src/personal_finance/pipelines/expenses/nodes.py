@@ -86,17 +86,12 @@ def unpivot_expenses(df: pd.DataFrame) -> pd.DataFrame:
                     "item": item,
                     "status": (
                         str(status).strip()
-                        if pd.notna(status)
-                        else None
+                        if pd.notna(status) else None
                     ),
                     "mes": month,
                     "valor": float(value),
                     "linha_origem": index + 1,
                 }
             )
-
-    # ---------------------------------------------------------
-    # DataFrame final
-    # ---------------------------------------------------------
 
     return pd.DataFrame(records)
